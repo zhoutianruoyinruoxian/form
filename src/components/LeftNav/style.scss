@@ -1,0 +1,31 @@
+$title-line-height: 36px;
+$mt: 5px;
+$title-all-height: $title-line-height + $mt*3;
+.left-nav-title {
+  position: relative;
+  transition: all 0.3s;
+  overflow: hidden;
+  text-align: left;
+  height: $title-all-height;
+  img {
+    display: block;
+    width: 120px;
+    margin: $mt auto $mt*2;
+  }
+  h3 {
+    color: #fff;
+    font-size: 22px;
+    margin: $mt 0 0 10px;
+    line-height: $title-line-height;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    a {
+      color: #fff;
+    }
+  }
+}
+.left-nav-menu {
+  height: calc(100% - #{($title-all-height)});
+}

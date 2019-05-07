@@ -1,0 +1,78 @@
+@import "./variable";
+.rack-room {
+  label {
+    display: inline-block;
+    width: 120px;
+  }
+  button {
+    margin-left: 20px;
+  }
+}
+.rack-management {
+  .rack-title {
+    width: 100%;
+    display: flex;
+    .block-title {
+      flex: 1 1 200px;
+      margin-left: 20px;
+      min-height: 100px;
+      &:first-child {
+        margin-left: 0;
+      }
+      .contact {
+        white-space: nowrap;
+      }
+    }
+  }
+  .rack-charts {
+    margin-top: 50px;
+  }
+  .rack-color-tip {
+    margin-top: 50px;
+  }
+  .rack-list {
+    margin: 0 0 30px;
+    border: 1px solid #bbb;
+    padding: 20px 5px;
+    overflow-x: auto;
+    .rack-row {
+      height: 46px;
+      display: flex;
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      li {
+        flex: 0 0 auto;
+        width: 145px;
+        padding: 0 5px;
+        h4 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.rack-color-tip {
+  margin: 0 auto 10px;
+  li {
+    float: left;
+    margin-left: 10px;
+    &::before {
+      content: "";
+      float: left;
+      background-color: $colorNull;
+      margin-top: 3px;
+      margin-right: 5px;
+      width: 25px;
+      height: 15px;
+      border-radius: 4px;
+    }
+    &.active::before {
+      background-color: $colorActive;
+    }
+    &.full::before {
+      background-color: $colorFull;
+    }
+  }
+}

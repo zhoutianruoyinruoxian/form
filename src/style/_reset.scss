@@ -1,0 +1,32 @@
+body {
+  min-width: 1200px;
+}
+
+a.normal {
+  color: #fff;
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.main-header{
+  background-color: #fff;
+}
+
+.ant-menu-dark {
+  background-color: #3f3f3f;
+  .ant-menu-item-selected {
+    background-color: #979797!important;
+  }
+}
+.ant-layout-content {
+  // flex: none;
+  flex-shrink: 0;
+}
+.ant-select {
+  width: 200px;
+}
+.ant-row{
+  margin-bottom: 20px;
+}

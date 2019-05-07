@@ -1,0 +1,42 @@
+@import "./_reset.scss";
+
+#root {
+  height: 100%;
+  .App {
+    height: inherit;
+    .ant-layout {
+      height: inherit;
+    }
+  }
+}
+
+.text-align-center {
+  text-align: center;
+}
+.select-search {
+  min-width: 180px;
+}
+
+.modal-alert {
+  .ant-modal-confirm-body {
+    text-align: center;
+    i {
+      font-size: 40px;
+      margin-right: 0;
+      float: none;
+    }
+    .ant-modal-confirm-title {
+      display: none;
+    }
+    .ant-modal-confirm-content {
+      margin-left: 0;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .ant-modal-confirm-btns{
+      float: none;
+      margin-top: 50px;
+      text-align: center;
+    }
+  }
+}
