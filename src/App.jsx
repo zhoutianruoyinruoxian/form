@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { mapMutations } from 'src/redux';
 import './App.css';
 import { Header, LeftNav, Footer } from 'src/components';
-import devCheckLogin from 'src/config/devConfig';
 
 
 // const { SubMenu } = Menu;
@@ -28,8 +27,6 @@ const mapDispatchToProps = () => {
 class App extends Component {
 
   componentDidMount() {
-    // devCheckLogin(this.props.history);
-    // !this.props.userInfo && this.props.getUserInfo();
 
     this.props.getUserInfo();
   }

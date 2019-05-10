@@ -272,7 +272,7 @@ module.exports = function (webpackEnv) {
         'api': path.resolve(__dirname, '../src/api'),
         '@': path.resolve(__dirname, '../src/components'),
         'pages': path.resolve(__dirname, '../src/pages'),
-        'variable': path.resolve(__dirname, '../src/style/variable.scss'),
+        'variable': path.resolve(__dirname, '../src/style/_variable.scss'),
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

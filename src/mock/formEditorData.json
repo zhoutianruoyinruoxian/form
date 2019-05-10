@@ -1,0 +1,38 @@
+[
+  {
+    "fieldType": "FormField",
+    "id": "text",
+    "name": "666",
+    "type": "text",
+    "value": "23213123123",
+    "required": false,
+    "readOnly": false,
+    "overrideId": false,
+    "placeholder": null,
+    "layout": null
+  },
+  {
+    "fieldType": "FormField",
+    "id": "label",
+    "name": "密码",
+    "type": "password",
+    "value": "3333",
+    "required": false,
+    "readOnly": false,
+    "overrideId": false,
+    "placeholder": null,
+    "layout": null
+  },
+  {
+    "fieldType": "FormField",
+    "id": "text",
+    "name": "文本",
+    "type": "text",
+    "value": "4444444",
+    "required": true,
+    "readOnly": false,
+    "overrideId": false,
+    "placeholder": null,
+    "layout": null
+  }
+]

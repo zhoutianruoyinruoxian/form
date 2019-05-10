@@ -1,7 +1,7 @@
 import app from './app.js';
-import rack from './rack.js';
+import formEditor from './formEditor.js';
 
 export default {
   app,
-  rack,
+  formEditor,
 };

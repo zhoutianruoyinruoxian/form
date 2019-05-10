@@ -8,3 +8,4 @@ export { default as SelectSearch } from './SelectSearch';
 export { default as SelectSearchObj } from './SelectSearchObj';
 export { default as CheckboxX } from './CheckboxX/CheckboxX';
 export { default as Echarts } from './Echarts';
+export { default as ControlledForm } from './ControlledForm';

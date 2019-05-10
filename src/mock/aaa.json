@@ -1,0 +1,53 @@
+{
+  "id": "53085ae3-663f-11e9-8b17-d07e350913e4",
+  "name": "form-approve",
+  "key": "formApprove",
+  "description": "是否批准",
+  "version": 1,
+  "lastUpdatedBy": "admin",
+  "lastUpdated": "2019-05-08T03:03:12.228+0000",
+  "formDefinition": {
+    "name": "form-approve",
+    "key": "formApprove",
+    "version": 0,
+    "fields": [
+      {
+        "fieldType": "FormField",
+        "id": "label",
+        "name": "Label",
+        "type": "text",
+        "value": null,
+        "required": false,
+        "readOnly": false,
+        "overrideId": false,
+        "placeholder": null,
+        "layout": null
+      },
+      {
+        "fieldType": "FormField",
+        "id": "label",
+        "name": "Label",
+        "type": "password",
+        "value": null,
+        "required": false,
+        "readOnly": false,
+        "overrideId": false,
+        "placeholder": null,
+        "layout": null
+      },
+      {
+        "fieldType": "FormField",
+        "id": "555555555",
+        "name": "222",
+        "type": "integer",
+        "value": null,
+        "required": false,
+        "readOnly": false,
+        "overrideId": true,
+        "placeholder": null,
+        "layout": null
+      }
+    ],
+    "outcomes": []
+  }
+}

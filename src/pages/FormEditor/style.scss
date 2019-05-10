@@ -1,0 +1,104 @@
+@import "src/style/variable";
+$border: 1px solid #bbb;
+$padl: 15px;
+$pad: 0 $padl;
+.form-editor {
+  background-color: #fff;
+  display: flex;
+  padding: 20px 0;
+  .form-editor-nav {
+    flex: 0 0 $formEditorLeftNavWitdh + 1 + $padl * 2;
+    padding: $pad;
+    .form-editor-nav-list {
+      border-right: $border;
+      border-bottom: $border;
+      li {
+        float: left;
+        width: $formEditorLeftNavWitdh/2;
+        height: 40px;
+        line-height: 40px;
+        border-left: $border;
+        border-top: $border;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        overflow: hidden;
+        position: relative;
+        span {
+          position: absolute;
+          left: -1px;
+          top: -1px;
+          display: block;
+          width: $formEditorLeftNavWitdh/2;
+          height: inherit;
+          line-height: inherit;
+          border: 1px dashed #d79616;
+          background-color: #fff;
+          &.drag-item {
+            opacity: 0;
+            transition: none!important;
+            &.dragging {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .form-editor-content {
+    flex: 1 0 auto;
+    padding: $pad;
+    .form-editor-rclist {
+      .form-drop-area {
+        min-height: 200px;
+        &.dragging-over {
+          border: 2px solid #aaa;
+        }
+      }
+      .ant-form-item {
+        padding: 30px 60px 30px 40px;
+        margin-bottom: 0;
+        border: 1px dashed #fff;
+        background-color: #fff;
+        &.selected {
+          border-color: #e8dbad !important;
+          background-color: #fffbef !important;
+        }
+        &.dragging {
+          border-color: #e8adce !important;
+          background-color: #ffeff7 !important;
+        }
+        // &.drag-hover {
+        //   opacity: 0.5;
+        // }
+      }
+      .item-operate {
+        $height: 50px;
+        position: absolute;
+        height: $height;
+        right: 15px;
+        top: 50%;
+        margin-top: -$height/2;
+        a {
+          $pad5: 2px;
+          padding: $pad5 5px;
+          line-height: $height/2 - $pad5 * 2;
+        }
+      }
+    }
+  }
+  .form-editor-config {
+    flex: 0 0 $formEditorLeftNavWitdh;
+    border-left: $border;
+    padding: $pad;
+  }
+}
+
+.drag-item {
+  &[data-react-beautiful-dnd-drag-handle="0"] {
+    cursor: move !important;
+  }
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+}

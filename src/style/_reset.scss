@@ -5,19 +5,19 @@ body {
 a.normal {
   color: #fff;
 }
-ul{
+ul {
   list-style: none;
   padding-left: 0;
 }
 
-.main-header{
+.main-header {
   background-color: #fff;
 }
 
 .ant-menu-dark {
   background-color: #3f3f3f;
   .ant-menu-item-selected {
-    background-color: #979797!important;
+    background-color: #979797 !important;
   }
 }
 .ant-layout-content {
@@ -27,6 +27,18 @@ ul{
 .ant-select {
   width: 200px;
 }
-.ant-row{
+.ant-row {
   margin-bottom: 20px;
+}
+
+.ant-form-item {
+  text-align: left;
+  display: flex;
+  .ant-form-item-label {
+    flex: 0 1 auto;
+    min-width: 200px;
+  }
+  .ant-form-item-control-wrapper {
+    flex: 1 1 auto;
+  }
 }

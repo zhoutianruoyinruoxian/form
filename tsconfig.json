@@ -24,7 +24,7 @@
         "./src/pages"
       ],
       "variable": [
-        "./src/style/variable.scss"
+        "./src/style/_variable.scss"
       ]
     }
   },
