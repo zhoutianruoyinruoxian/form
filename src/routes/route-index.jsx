@@ -4,7 +4,7 @@ import App from '../App';
 import menuList from 'src/config/menuList';
 import { NotFound, NoPermission } from 'src/containers';
 import FormEditor from 'pages/FormEditor';
-// import test from 'pages/test';
+import test from 'pages/test';
 
 export default (store) => {
   return (
@@ -13,7 +13,7 @@ export default (store) => {
         <Switch>
           <Redirect exact from="/" to="/FormEditor" />
           <Route exact path="/FormEditor" component={FormEditor} />
-          {/* <Route exact path="/test" component={test} /> */}
+          <Route exact path="/test" component={test} />
 
           <Route component={NotFound} />
         </Switch>

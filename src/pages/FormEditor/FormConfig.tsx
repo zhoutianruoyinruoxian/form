@@ -3,10 +3,6 @@ import formConfigMap from 'src/config/formConfigMap';
 
 export default class FormContent extends Component<any, any> {
 
-  selectRc = (e) => {
-
-  }
-
   changeConfig = (value, name) => {
     this.props.onChange && this.props.onChange(value, name)
   }

@@ -1,43 +1,67 @@
 @import "src/style/variable";
-$border: 1px solid #bbb;
+$navBorderColor: #ccc;
+$navBorder: 1px solid $navBorderColor;
 $padl: 15px;
 $pad: 0 $padl;
+$editorHeight: calc(100vh - 45px);
 .form-editor {
   background-color: #fff;
   display: flex;
   padding: 20px 0;
+  & > div {
+    height: $editorHeight;
+    overflow: auto;
+  }
   .form-editor-nav {
     flex: 0 0 $formEditorLeftNavWitdh + 1 + $padl * 2;
     padding: $pad;
-    .form-editor-nav-list {
-      border-right: $border;
-      border-bottom: $border;
-      li {
-        float: left;
-        width: $formEditorLeftNavWitdh/2;
-        height: 40px;
+    .form-editor-nav-section {
+      h2 {
+        background-color: $navBorderColor;
+        font-size: 16px;
         line-height: 40px;
-        border-left: $border;
-        border-top: $border;
-        border-right: 1px solid #fff;
-        border-bottom: 1px solid #fff;
-        overflow: hidden;
+        font-weight: bold;
+      }
+      .form-editor-nav-component {
         position: relative;
-        span {
-          position: absolute;
-          left: -1px;
-          top: -1px;
-          display: block;
-          width: $formEditorLeftNavWitdh/2;
-          height: inherit;
-          line-height: inherit;
-          border: 1px dashed #d79616;
-          background-color: #fff;
-          &.drag-item {
-            opacity: 0;
-            transition: none!important;
-            &.dragging {
-              opacity: 1;
+        .form-editor-nav-list {
+          border-right: $navBorder;
+          border-bottom: $navBorder;
+          &.absolute {
+            position: absolute;
+            top: 0;
+          }
+          li {
+            float: left;
+            width: $formEditorLeftNavWitdh/2;
+            height: 40px;
+            line-height: 40px;
+            border-left: $navBorder;
+            border-top: $navBorder;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            overflow: hidden;
+            position: relative;
+            span {
+              position: absolute;
+              left: -1px;
+              top: -1px;
+              display: block;
+              width: $formEditorLeftNavWitdh/2;
+              height: inherit;
+              line-height: inherit;
+              border: 1px dashed #d79616;
+              background-color: #fff;
+              &.drag-item {
+                opacity: 0;
+                &.dragging {
+                  opacity: 1;
+                }
+                &.invalid {
+                  opacity: 0;
+                  transition: transform 1ms !important;
+                }
+              }
             }
           }
         }
@@ -50,22 +74,24 @@ $pad: 0 $padl;
     .form-editor-rclist {
       .form-drop-area {
         min-height: 200px;
+        border: 2px solid #fff;
         &.dragging-over {
-          border: 2px solid #aaa;
+          border-color: #aaa;
         }
       }
       .ant-form-item {
         padding: 30px 60px 30px 40px;
         margin-bottom: 0;
-        border: 1px dashed #fff;
-        background-color: #fff;
+        border: 1px dashed;
+        border-color: #bbb;
+        background-color: #fbfbfb;
         &.selected {
-          border-color: #e8dbad !important;
-          background-color: #fffbef !important;
-        }
-        &.dragging {
           border-color: #e8adce !important;
           background-color: #ffeff7 !important;
+        }
+        &.dragging {
+          // border-color: #ddd !important;
+          // background-color: #eee !important;
         }
         // &.drag-hover {
         //   opacity: 0.5;
@@ -88,7 +114,7 @@ $pad: 0 $padl;
   }
   .form-editor-config {
     flex: 0 0 $formEditorLeftNavWitdh;
-    border-left: $border;
+    border-left: $navBorderColor;
     padding: $pad;
   }
 }

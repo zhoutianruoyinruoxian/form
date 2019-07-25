@@ -60,7 +60,7 @@ class FormContent extends Component<any, any> {
         <Form
           className={`${FORMCLS}-rclist`}
         >
-          <Droppable droppableId={droppableId}>
+          <Droppable droppableId={droppableId.FORM}>
             {(provided, snapshot) => (
               <div
                 ref={provided.innerRef}
@@ -78,6 +78,8 @@ class FormContent extends Component<any, any> {
                     />
                   )
                 })}
+                {/* 拖拽之后产生的空缺由provided.placeholder来弥补 */}
+                {provided.placeholder}
               </div>
             )}
           </Droppable>

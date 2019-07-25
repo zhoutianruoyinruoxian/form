@@ -13,7 +13,6 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import './style.scss';
 
 import data from 'src/mock/formEditorData.json';
-import { any } from 'prop-types';
 
 const mapDispatchToProps = () => {
   return {
@@ -105,14 +104,15 @@ class App extends Component<any, any> {
         <div className={FORMCLS}>
           <div className={`${FORMCLS}-nav`}>
             <FormEditorNav
+              title="通用组件"
               formData={formData}
-              droppableId={this.droppableId.NAV}
+              droppableId={this.droppableId}
             />
           </div>
           <div className={`${FORMCLS}-content`}>
             <FormContent
               formData={formData}
-              droppableId={this.droppableId.FORM}
+              droppableId={this.droppableId}
               onSelect={this.selectRc}
               selectIndex={selectIndex}
             />
